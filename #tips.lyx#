@@ -227,162 +227,25 @@ What is FOUC? How do you avoid FOUC?
 HTML Questions
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Standard
 What's a doctype do? 
 \end_layout
 
 \begin_layout Standard
-Doctype
-\end_layout
-
-\begin_layout Paragraph
 What's the difference between standards mode and quirks mode? 
 \end_layout
 
 \begin_layout Standard
-Standards mode
-\end_layout
-
-\begin_layout Standard
-Quirks mode
-\end_layout
-
-\begin_layout Paragraph
 What are the limitations when serving XHTML pages? Are there any problems
  with serving pages as application/xhtml+xml? 
 \end_layout
 
 \begin_layout Standard
-Limitation
-\end_layout
-
-\begin_layout Paragraph
 How do you serve a page with content in multiple languages? What kind of
  things must you be wary of when design or developing for multilingual sites?
- 
-\end_layout
-
-\begin_layout Standard
-Cek edX developing international software
-\end_layout
-
-\begin_layout Paragraph
-What are data- attributes good for? 
-\end_layout
-
-\begin_layout Paragraph
-Consider HTML5 as an open web platform.
- What are the building blocks of HTML5? 
-\end_layout
-
-\begin_layout Standard
-Building block
-\end_layout
-
-\begin_layout Paragraph
-Describe the difference between cookies, sessionStorage and localStorage.
-\end_layout
-
-\begin_layout Standard
-Cookies:
-\end_layout
-
-\begin_layout Standard
-sessionStorage:
-\end_layout
-
-\begin_layout Standard
-localStorage:
-\end_layout
-
-\begin_layout Section
-CSS Questions
-\end_layout
-
-\begin_layout Paragraph
-Describe what a "reset" CSS file does and how it's useful.
- 
-\end_layout
-
-\begin_layout Paragraph
-Describe Floats and how they work.
- 
-\end_layout
-
-\begin_layout Paragraph
-What are the various clearing techniques and which is appropriate for what
- context? 
-\end_layout
-
-\begin_layout Paragraph
-Explain CSS sprites, and how you would implement them on a page or site.
- 
-\end_layout
-
-\begin_layout Paragraph
-What are your favourite image replacement techniques and which do you use
- and when?
-\end_layout
-
-\begin_layout Paragraph
-CSS property hacks, conditionally included .css files, or...
- something else? 
-\end_layout
-
-\begin_layout Paragraph
-How do you serve your pages for feature-constrained browsers? What techniques/pr
-ocesses do you use? 
-\end_layout
-
-\begin_layout Paragraph
-What are the different ways to visually hide content (and make it available
- only for screen readers)? 
-\end_layout
-
-\begin_layout Paragraph
-Have you ever used a grid system, and if so, what do you prefer? 
-\end_layout
-
-\begin_layout Paragraph
-Have you used or implemented media queries or mobile specific layouts/CSS?
- 
-\end_layout
-
-\begin_layout Paragraph
-Any familiarity with styling SVG? 
-\end_layout
-
-\begin_layout Paragraph
-How do you optimize your webpages for print? 
-\end_layout
-
-\begin_layout Paragraph
-What are some of the "gotchas" for writing efficient CSS? 
-\end_layout
-
-\begin_layout Paragraph
-What are the advantages/disadvantages of using CSS preprocessors? (SASS,
- Compass, Stylus, LESS) If so, describe what you like and dislike about
- the CSS preprocessors you have used.
- 
-\end_layout
-
-\begin_layout Paragraph
-How would you implement a web design comp that uses non-standard fonts?
- 
-\end_layout
-
-\begin_layout Standard
-Webfonts (font services like: Google Webfonts, Typekit etc.) 
-\end_layout
-
-\begin_layout Paragraph
-Explain how a browser determines what elements match a CSS selector? 
-\end_layout
-
-\begin_layout Paragraph
-Explain your understanding of the box model and how you would tell the browser
- in CSS to render your layout in different box models.
+ What are data- attributes good for? Consider HTML5 as an open web platform.
+ What are the building blocks of HTML5? Describe the difference between
+ cookies, sessionStorage and localStorage.
 \end_layout
 
 \end_body
