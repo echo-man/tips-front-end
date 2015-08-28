@@ -99,16 +99,6 @@ enumitem
 
 \begin_layout Title
 Front-end Job Interview Questions
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Contributed by echo-man and gemabuj
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -152,11 +142,15 @@ Talk about your preferred development environment.
 
 \begin_layout Standard
 Windows, Sublime Text 2, Opera & Mozilla Firefox, Jade, Sass, Gulp, Browser-sync
-, Bootstrap, Foundation, Bourbon
+, Bootstrap, Foundation, thoughbot (bourbon, neat, bitters, refills), flexbox
 \end_layout
 
 \begin_layout Paragraph
 Can you describe your workflow when you create a web page? 
+\end_layout
+
+\begin_layout Enumerate
+Create body, #container, #header, #main, #nav, #footer
 \end_layout
 
 \begin_layout Paragraph
@@ -227,6 +221,82 @@ Explain the importance of standards and standards bodies.
 
 \begin_layout Paragraph
 What is FOUC? How do you avoid FOUC?
+\end_layout
+
+\begin_layout Section
+HTML Questions
+\end_layout
+
+\begin_layout Paragraph
+What's a doctype do? 
+\end_layout
+
+\begin_layout Standard
+Doctype
+\end_layout
+
+\begin_layout Paragraph
+What's the difference between standards mode and quirks mode? 
+\end_layout
+
+\begin_layout Standard
+Standards mode
+\end_layout
+
+\begin_layout Standard
+Quirks mode
+\end_layout
+
+\begin_layout Paragraph
+What are the limitations when serving XHTML pages? Are there any problems
+ with serving pages as application/xhtml+xml? 
+\end_layout
+
+\begin_layout Standard
+Limitation
+\end_layout
+
+\begin_layout Paragraph
+How do you serve a page with content in multiple languages? What kind of
+ things must you be wary of when design or developing for multilingual sites?
+ 
+\end_layout
+
+\begin_layout Standard
+Cek edX developing international software
+\end_layout
+
+\begin_layout Paragraph
+What are data- attributes good for? 
+\end_layout
+
+\begin_layout Paragraph
+Consider HTML5 as an open web platform.
+ What are the building blocks of HTML5? 
+\end_layout
+
+\begin_layout Standard
+Building block
+\end_layout
+
+\begin_layout Paragraph
+Describe the difference between cookies, sessionStorage and localStorage.
+\end_layout
+
+\begin_layout Standard
+Cookies:
+\end_layout
+
+\begin_layout Standard
+sessionStorage:
+\end_layout
+
+\begin_layout Standard
+localStorage:
+\end_layout
+
+\begin_layout Section
+CSS Questions
 \end_layout
 
 \end_body
