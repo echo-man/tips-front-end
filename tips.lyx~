@@ -299,5 +299,269 @@ localStorage:
 CSS Questions
 \end_layout
 
+\begin_layout Paragraph
+Describe what a "reset" CSS file does and how it's useful.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Describe Floats and how they work.
+ 
+\end_layout
+
+\begin_layout Paragraph
+What are the various clearing techniques and which is appropriate for what
+ context? 
+\end_layout
+
+\begin_layout Paragraph
+Explain CSS sprites, and how you would implement them on a page or site.
+ 
+\end_layout
+
+\begin_layout Paragraph
+What are your favourite image replacement techniques and which do you use
+ and when?
+\end_layout
+
+\begin_layout Paragraph
+CSS property hacks, conditionally included .css files, or...
+ something else? 
+\end_layout
+
+\begin_layout Paragraph
+How do you serve your pages for feature-constrained browsers? What techniques/pr
+ocesses do you use? 
+\end_layout
+
+\begin_layout Paragraph
+What are the different ways to visually hide content (and make it available
+ only for screen readers)? 
+\end_layout
+
+\begin_layout Paragraph
+Have you ever used a grid system, and if so, what do you prefer? 
+\end_layout
+
+\begin_layout Paragraph
+Have you used or implemented media queries or mobile specific layouts/CSS?
+ 
+\end_layout
+
+\begin_layout Paragraph
+Any familiarity with styling SVG? 
+\end_layout
+
+\begin_layout Paragraph
+How do you optimize your webpages for print? 
+\end_layout
+
+\begin_layout Paragraph
+What are some of the "gotchas" for writing efficient CSS? 
+\end_layout
+
+\begin_layout Paragraph
+What are the advantages/disadvantages of using CSS preprocessors? (SASS,
+ Compass, Stylus, LESS) If so, describe what you like and dislike about
+ the CSS preprocessors you have used.
+ 
+\end_layout
+
+\begin_layout Paragraph
+How would you implement a web design comp that uses non-standard fonts?
+ 
+\end_layout
+
+\begin_layout Standard
+Webfonts (font services like: Google Webfonts, Typekit etc.) 
+\end_layout
+
+\begin_layout Paragraph
+Explain how a browser determines what elements match a CSS selector? 
+\end_layout
+
+\begin_layout Paragraph
+Explain your understanding of the box model and how you would tell the browser
+ in CSS to render your layout in different box models.
+\end_layout
+
+\begin_layout Section
+JS Questions
+\end_layout
+
+\begin_layout Paragraph
+Explain event delegation 
+\end_layout
+
+\begin_layout Paragraph
+Explain how this works in JavaScript 
+\end_layout
+
+\begin_layout Paragraph
+Explain how prototypal inheritance works 
+\end_layout
+
+\begin_layout Paragraph
+How do you go about testing your JavaScript? 
+\end_layout
+
+\begin_layout Paragraph
+AMD vs.
+ CommonJS? 
+\end_layout
+
+\begin_layout Paragraph
+What's a hashtable? 
+\end_layout
+
+\begin_layout Standard
+Explain why the following doesn't work as an IIFE: function foo(){ }();.
+ What needs to be changed to properly make it an IIFE? What's the difference
+ between a variable that is: null, undefined or undeclared? How would you
+ go about checking for any of these states? What is a closure, and how/why
+ would you use one? What's a typical use case for anonymous functions? Explain
+ the "JavaScript module pattern" and when you'd use it.
+ Bonus points for mentioning clean namespacing.
+ What if your modules are namespace-less? How do you organize your code?
+ (module pattern, classical inheritance?) What's the difference between
+ host objects and native objects? Difference between: function Person(){},
+ var person = Person(), and var person = new Person()? What's the difference
+ between .call and .apply? explain Function.prototype.bind? When do you optimize
+ your code? Can you explain how inheritance works in JavaScript? When would
+ you use document.write()? Most generated ads still utilize document.write()
+ although its use is frowned upon What's the difference between feature
+ detection, feature inference, and using the UA string Explain AJAX in as
+ much detail as possible Explain how JSONP works (and how it's not really
+ AJAX) 
+\end_layout
+
+\begin_layout Paragraph
+Have you ever used JavaScript templating? If so, what libraries have you
+ used? 
+\end_layout
+
+\begin_layout Standard
+(Mustache.js, Handlebars etc.) 
+\end_layout
+
+\begin_layout Paragraph
+Explain "hoisting".
+ 
+\end_layout
+
+\begin_layout Paragraph
+Describe event bubbling.
+ 
+\end_layout
+
+\begin_layout Paragraph
+What's the difference between an "attribute" and a "property"?
+\end_layout
+
+\begin_layout Paragraph
+Why is extending built in JavaScript objects not a good idea? 
+\end_layout
+
+\begin_layout Paragraph
+Why is extending built ins a good idea? 
+\end_layout
+
+\begin_layout Paragraph
+Difference between document load event and document ready event? 
+\end_layout
+
+\begin_layout Paragraph
+What is the difference between == and ===? 
+\end_layout
+
+\begin_layout Paragraph
+Explain how you would get a query string parameter from the browser window's
+ URL.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Explain the same-origin policy with regards to JavaScript.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Describe inheritance patterns in JavaScript.
+\end_layout
+
+\begin_layout Paragraph
+Describe a strategy for memoization (avoiding calculation repetition) in
+ JavaScript.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Why is it called a Ternary expression, what does the word "Ternary" indicate?
+ 
+\end_layout
+
+\begin_layout Paragraph
+What is the arity of a function? 
+\end_layout
+
+\begin_layout Paragraph
+What is "use strict";? what are the advantages and disadvantages to using
+ it?
+\end_layout
+
+\begin_layout Section
+jQuery Questions
+\end_layout
+
+\begin_layout Paragraph
+Explain "chaining".
+ 
+\end_layout
+
+\begin_layout Paragraph
+Explain "deferreds".
+ 
+\end_layout
+
+\begin_layout Paragraph
+What are some jQuery specific optimizations you can implement? 
+\end_layout
+
+\begin_layout Paragraph
+What does .end() do? 
+\end_layout
+
+\begin_layout Paragraph
+How, and why, would you namespace a bound event handler? 
+\end_layout
+
+\begin_layout Paragraph
+Name 4 different values you can pass to the jQuery method.
+ 
+\end_layout
+
+\begin_layout Standard
+Selector (string), HTML (string), Callback (function), HTMLElement, object,
+ array, element array, jQuery Object etc.
+ 
+\end_layout
+
+\begin_layout Paragraph
+What is the effects (or fx) queue? 
+\end_layout
+
+\begin_layout Paragraph
+What is the difference between .get(), [], and .eq()? 
+\end_layout
+
+\begin_layout Paragraph
+What is the difference between .bind(), .live(), and .delegate()? 
+\end_layout
+
+\begin_layout Paragraph
+What is the difference between $ and $.fn? Or just what is $.fn.
+ 
+\end_layout
+
 \end_body
 \end_document
