@@ -393,16 +393,195 @@ JS Questions
 Explain event delegation 
 \end_layout
 
+\begin_layout Standard
+Event delegation allows us to attach a single event listener, to a parent
+ element, that will fire for all descendants matching a selector, whether
+ those descendants exist now or are added in the future.
+\end_layout
+
 \begin_layout Paragraph
 Explain how this works in JavaScript 
+\end_layout
+
+\begin_layout Standard
+[HARD] For the remainder of the lesson, we will reference the following
+ HTML structure:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<html>
+\end_layout
+
+\begin_layout Plain Layout
+
+<body>
+\end_layout
+
+\begin_layout Plain Layout
+
+<div id="container">
+\end_layout
+
+\begin_layout Plain Layout
+
+    <ul id="list">
+\end_layout
+
+\begin_layout Plain Layout
+
+        <li><a href="http://domain1.com">Item #1</a></li>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <li><a href="/local/path/1">Item #2</a></li>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <li><a href="/local/path/2">Item #3</a></li>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <li><a href="http://domain4.com">Item #4</a></li>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </ul>
+\end_layout
+
+\begin_layout Plain Layout
+
+</div>
+\end_layout
+
+\begin_layout Plain Layout
+
+</body>
+\end_layout
+
+\begin_layout Plain Layout
+
+</html>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When an anchor in our #list group is clicked, we want to log its text to
+ the console.
+ Normally we could directly bind to the click event of each anchor using
+ the .on() method:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Attach a directly bound event handler
+\end_layout
+
+\begin_layout Plain Layout
+
+$( "#list a" ).on( "click", function( event ) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    event.preventDefault();
+\end_layout
+
+\begin_layout Plain Layout
+
+    console.log( $( this ).text() );
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
 Explain how prototypal inheritance works 
 \end_layout
 
+\begin_layout Standard
+[HARD] Everywhere on the web we read that Javascript has prototypal inheritance.
+ However Javascript only provides by default a specific case of prototypal
+ inheritance with the new operator.
+ Therefore, most of the explanations are really confusing to read.
+ This article aims to clarify what is prototypal inheritance and how to
+ really use it on Javascript
+\end_layout
+
 \begin_layout Paragraph
 How do you go about testing your JavaScript? 
+\end_layout
+
+\begin_layout Standard
+Try using Karma, Jasmine, and Istanbul for your JavaScript testing workflow.
+ Together, these tools have saved me tons of time and headache.
+ If you're interested in unit-testing your JavaScript or upgrading your
+ current testing workflow, spend a day or two playing around with them to
+ see if they're right for you, too.
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -410,29 +589,304 @@ AMD vs.
  CommonJS? 
 \end_layout
 
+\begin_layout Standard
+[HARD] RequireJS implements the AMD API, while CommonJS is a way of defining
+ modules with the help of an exports object, that defines the module contents.
+ 
+\end_layout
+
 \begin_layout Paragraph
 What's a hashtable? 
 \end_layout
 
 \begin_layout Standard
+In computing, a hash table (hash map) is a data structure used to implement
+ an associative array, a structure that can map keys to values.
+ A hash table uses a hash function to compute an index into an array of
+ buckets or slots, from which the desired value can be found [WIKI]
+\end_layout
+
+\begin_layout Paragraph
 Explain why the following doesn't work as an IIFE: function foo(){ }();.
- What needs to be changed to properly make it an IIFE? What's the difference
- between a variable that is: null, undefined or undeclared? How would you
- go about checking for any of these states? What is a closure, and how/why
- would you use one? What's a typical use case for anonymous functions? Explain
- the "JavaScript module pattern" and when you'd use it.
+ What needs to be changed to properly make it an IIFE? 
+\end_layout
+
+\begin_layout Standard
+[HARD] 
+\end_layout
+
+\begin_layout Paragraph
+What's the difference between a variable that is: null, undefined or undeclared?
+ How would you go about checking for any of these states? 
+\end_layout
+
+\begin_layout Standard
+I think they make more sense in the opposite order: undeclared, undefined,
+ and null.
+ That's the order I'm going to tackle them anyways.
+\end_layout
+
+\begin_layout Itemize
+First up is undeclared.
+\end_layout
+
+\begin_layout Standard
+A variable is undeclared when it does not use the var keyword.
+ It gets created on the global object (that is, the window), thus it operates
+ in a different space as the declared variables.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+var declaredVariable = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+function scoppedVariables() {
+\end_layout
+
+\begin_layout Plain Layout
+
+  undeclaredVariable = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  var declaredVariable = 2;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+scoppedVariables();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+undeclaredVariable; // 1
+\end_layout
+
+\begin_layout Plain Layout
+
+declaredVariable; // 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Now let's move on to undefined.
+\end_layout
+
+\begin_layout Standard
+Something is undefined when it hasn't been defined yet.
+ If you call a variable or function without having actually created it yet
+ the parser will give you an not defined error.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+var undefinedVariable; // ReferenceError: undefinedVariable is not defined
+\end_layout
+
+\begin_layout Plain Layout
+
+typeof undefinedVariable; // "undefined"
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+undefinedFunction(); // ReferenceError: undefinedFunction is not defined
+\end_layout
+
+\begin_layout Plain Layout
+
+typeof undefinedFunction; // "undefined"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Finally we'll finish up with null.
+\end_layout
+
+\begin_layout Standard
+null is a variable that is defined to have a null value.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+var nullVariable = null; // null
+\end_layout
+
+\begin_layout Plain Layout
+
+typeof nullVariable // "object"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+What is a closure, and how/why would you use one? 
+\end_layout
+
+\begin_layout Paragraph
+What's a typical use case for anonymous functions? 
+\end_layout
+
+\begin_layout Paragraph
+Explain the "JavaScript module pattern" and when you'd use it.
  Bonus points for mentioning clean namespacing.
- What if your modules are namespace-less? How do you organize your code?
- (module pattern, classical inheritance?) What's the difference between
- host objects and native objects? Difference between: function Person(){},
- var person = Person(), and var person = new Person()? What's the difference
- between .call and .apply? explain Function.prototype.bind? When do you optimize
- your code? Can you explain how inheritance works in JavaScript? When would
- you use document.write()? Most generated ads still utilize document.write()
- although its use is frowned upon What's the difference between feature
- detection, feature inference, and using the UA string Explain AJAX in as
- much detail as possible Explain how JSONP works (and how it's not really
- AJAX) 
+ What if your modules are namespace-less? 
+\end_layout
+
+\begin_layout Paragraph
+How do you organize your code? (module pattern, classical inheritance?)
+ 
+\end_layout
+
+\begin_layout Paragraph
+What's the difference between host objects and native objects? 
+\end_layout
+
+\begin_layout Paragraph
+Difference between: function Person(){}, var person = Person(), and var
+ person = new Person()? 
+\end_layout
+
+\begin_layout Paragraph
+What's the difference between .call and .apply? 
+\end_layout
+
+\begin_layout Paragraph
+Explain Function.prototype.bind? 
+\end_layout
+
+\begin_layout Paragraph
+When do you optimize your code? 
+\end_layout
+
+\begin_layout Paragraph
+Can you explain how inheritance works in JavaScript? 
+\end_layout
+
+\begin_layout Paragraph
+When would you use document.write()? Most generated ads still utilize document.wri
+te() although its use is frowned upon 
+\end_layout
+
+\begin_layout Paragraph
+What's the difference between feature detection, feature inference, and
+ using the UA string 
+\end_layout
+
+\begin_layout Paragraph
+Explain AJAX in as much detail as possible 
+\end_layout
+
+\begin_layout Paragraph
+Explain how JSONP works (and how it's not really AJAX) 
 \end_layout
 
 \begin_layout Paragraph

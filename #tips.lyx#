@@ -385,8 +385,402 @@ Explain your understanding of the box model and how you would tell the browser
  in CSS to render your layout in different box models.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section
+JS Questions
+\end_layout
 
+\begin_layout Paragraph
+Explain event delegation 
+\end_layout
+
+\begin_layout Standard
+Event delegation allows us to attach a single event listener, to a parent
+ element, that will fire for all descendants matching a selector, whether
+ those descendants exist now or are added in the future.
+\end_layout
+
+\begin_layout Paragraph
+Explain how this works in JavaScript 
+\end_layout
+
+\begin_layout Standard
+For the remainder of the lesson, we will reference the following HTML structure:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<html>
+\end_layout
+
+\begin_layout Plain Layout
+
+<body>
+\end_layout
+
+\begin_layout Plain Layout
+
+<div id="container">
+\end_layout
+
+\begin_layout Plain Layout
+
+    <ul id="list">
+\end_layout
+
+\begin_layout Plain Layout
+
+        <li><a href="http://domain1.com">Item #1</a></li>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <li><a href="/local/path/1">Item #2</a></li>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <li><a href="/local/path/2">Item #3</a></li>
+\end_layout
+
+\begin_layout Plain Layout
+
+        <li><a href="http://domain4.com">Item #4</a></li>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </ul>
+\end_layout
+
+\begin_layout Plain Layout
+
+</div>
+\end_layout
+
+\begin_layout Plain Layout
+
+</body>
+\end_layout
+
+\begin_layout Plain Layout
+
+</html>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When an anchor in our #list group is clicked, we want to log its text to
+ the console.
+ Normally we could directly bind to the click event of each anchor using
+ the .on() method:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Attach a directly bound event handler
+\end_layout
+
+\begin_layout Plain Layout
+
+$( "#list a" ).on( "click", function( event ) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    event.preventDefault();
+\end_layout
+
+\begin_layout Plain Layout
+
+    console.log( $( this ).text() );
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Explain how prototypal inheritance works 
+\end_layout
+
+\begin_layout Standard
+Everywhere on the web we read that Javascript has prototypal inheritance.
+ However Javascript only provides by default a specific case of prototypal
+ inheritance with the new operator.
+ Therefore, most of the explanations are really confusing to read.
+ This article aims to clarify what is prototypal inheritance and how to
+ really use it on Javascript
+\end_layout
+
+\begin_layout Paragraph
+How do you go about testing your JavaScript? 
+\end_layout
+
+\begin_layout Paragraph
+AMD vs.
+ CommonJS? 
+\end_layout
+
+\begin_layout Paragraph
+What's a hashtable? 
+\end_layout
+
+\begin_layout Paragraph
+Explain why the following doesn't work as an IIFE: function foo(){ }();.
+ What needs to be changed to properly make it an IIFE? 
+\end_layout
+
+\begin_layout Paragraph
+What's the difference between a variable that is: null, undefined or undeclared?
+ How would you go about checking for any of these states? 
+\end_layout
+
+\begin_layout Paragraph
+What is a closure, and how/why would you use one? 
+\end_layout
+
+\begin_layout Paragraph
+What's a typical use case for anonymous functions? 
+\end_layout
+
+\begin_layout Paragraph
+Explain the "JavaScript module pattern" and when you'd use it.
+ Bonus points for mentioning clean namespacing.
+ What if your modules are namespace-less? 
+\end_layout
+
+\begin_layout Paragraph
+How do you organize your code? (module pattern, classical inheritance?)
+ 
+\end_layout
+
+\begin_layout Paragraph
+What's the difference between host objects and native objects? 
+\end_layout
+
+\begin_layout Paragraph
+Difference between: function Person(){}, var person = Person(), and var
+ person = new Person()? 
+\end_layout
+
+\begin_layout Paragraph
+What's the difference between .call and .apply? 
+\end_layout
+
+\begin_layout Paragraph
+Explain Function.prototype.bind? 
+\end_layout
+
+\begin_layout Paragraph
+When do you optimize your code? 
+\end_layout
+
+\begin_layout Paragraph
+Can you explain how inheritance works in JavaScript? 
+\end_layout
+
+\begin_layout Paragraph
+When would you use document.write()? Most generated ads still utilize document.wri
+te() although its use is frowned upon 
+\end_layout
+
+\begin_layout Paragraph
+What's the difference between feature detection, feature inference, and
+ using the UA string 
+\end_layout
+
+\begin_layout Paragraph
+Explain AJAX in as much detail as possible 
+\end_layout
+
+\begin_layout Paragraph
+Explain how JSONP works (and how it's not really AJAX) 
+\end_layout
+
+\begin_layout Paragraph
+Have you ever used JavaScript templating? If so, what libraries have you
+ used? 
+\end_layout
+
+\begin_layout Standard
+(Mustache.js, Handlebars etc.) 
+\end_layout
+
+\begin_layout Paragraph
+Explain "hoisting".
+ 
+\end_layout
+
+\begin_layout Paragraph
+Describe event bubbling.
+ 
+\end_layout
+
+\begin_layout Paragraph
+What's the difference between an "attribute" and a "property"?
+\end_layout
+
+\begin_layout Paragraph
+Why is extending built in JavaScript objects not a good idea? 
+\end_layout
+
+\begin_layout Paragraph
+Why is extending built ins a good idea? 
+\end_layout
+
+\begin_layout Paragraph
+Difference between document load event and document ready event? 
+\end_layout
+
+\begin_layout Paragraph
+What is the difference between == and ===? 
+\end_layout
+
+\begin_layout Paragraph
+Explain how you would get a query string parameter from the browser window's
+ URL.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Explain the same-origin policy with regards to JavaScript.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Describe inheritance patterns in JavaScript.
+\end_layout
+
+\begin_layout Paragraph
+Describe a strategy for memoization (avoiding calculation repetition) in
+ JavaScript.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Why is it called a Ternary expression, what does the word "Ternary" indicate?
+ 
+\end_layout
+
+\begin_layout Paragraph
+What is the arity of a function? 
+\end_layout
+
+\begin_layout Paragraph
+What is "use strict";? what are the advantages and disadvantages to using
+ it?
+\end_layout
+
+\begin_layout Section
+jQuery Questions
+\end_layout
+
+\begin_layout Paragraph
+Explain "chaining".
+ 
+\end_layout
+
+\begin_layout Paragraph
+Explain "deferreds".
+ 
+\end_layout
+
+\begin_layout Paragraph
+What are some jQuery specific optimizations you can implement? 
+\end_layout
+
+\begin_layout Paragraph
+What does .end() do? 
+\end_layout
+
+\begin_layout Paragraph
+How, and why, would you namespace a bound event handler? 
+\end_layout
+
+\begin_layout Paragraph
+Name 4 different values you can pass to the jQuery method.
+ 
+\end_layout
+
+\begin_layout Standard
+Selector (string), HTML (string), Callback (function), HTMLElement, object,
+ array, element array, jQuery Object etc.
+ 
+\end_layout
+
+\begin_layout Paragraph
+What is the effects (or fx) queue? 
+\end_layout
+
+\begin_layout Paragraph
+What is the difference between .get(), [], and .eq()? 
+\end_layout
+
+\begin_layout Paragraph
+What is the difference between .bind(), .live(), and .delegate()? 
+\end_layout
+
+\begin_layout Paragraph
+What is the difference between $ and $.fn? Or just what is $.fn.
+ 
 \end_layout
 
 \end_body
