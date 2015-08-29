@@ -223,6 +223,10 @@ Explain the importance of standards and standards bodies.
 What is FOUC? How do you avoid FOUC?
 \end_layout
 
+\begin_layout Standard
+Flash of the unstyled content
+\end_layout
+
 \begin_layout Section
 HTML Questions
 \end_layout
